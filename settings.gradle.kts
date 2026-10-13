@@ -31,5 +31,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "m8test-gradle-templates"
+rootProject.name = "m8test-kotlin-template"
 include(":kotlin")
