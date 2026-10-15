@@ -7,6 +7,8 @@ description: 当需要开发、测试或验证本脚本项目模板及其语言�
 
 本技能用于开发本项目提供的脚本模板。先从 `README.md`、`settings.gradle.kts` 和 Gradle 配置识别语言与任务前缀。
 
+发现或使用脚本全局变量时，读取 `using-script-global-variables` 技能；它要求从当前项目的生成任务确认完整变量名和类型。
+
 ## 日常流程
 
 1. 阅读本仓库现有脚本、资源、`src/test-control` fixture 和项目配置，再修改模板内容。
