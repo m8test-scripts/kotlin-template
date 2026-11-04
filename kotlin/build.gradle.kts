@@ -33,7 +33,11 @@ m8testKotlin {
         // 安卓设备的adb调试端口, 如果是云手机的话就需要填写内网穿透时映射的adb端口
         adbPort = 5555
         // 安卓设备调试器服务启动的端口
-        port = 5354
+        port = providers.gradleProperty("debugger.port").get().toInt()
+        auth {
+            username = providers.gradleProperty("debugger.auth.username").get()
+            password = providers.gradleProperty("debugger.auth.password").get()
+        }
         // 打包apk时的运行时模板apk配置, 打包apk时会将脚本项目打包到该模板apk中
         runtimeConfig {
             // 模板apk的版本
