@@ -1,0 +1,44 @@
+{
+  "formatVersion": 1,
+  "source": "https://github.com/m8test-core/skills.git",
+  "declarationSha256": "da310908dd03c992fb5642bef1be21c6522b9e24c2c1a7cecb6ec6f2d8e5ef4c",
+  "commit": "d9329c94a656981ebad21b71d0ec7724500d5b95",
+  "skills": [
+    {
+      "path": "skills/writing-commit-messages",
+      "installName": "writing-commit-messages",
+      "sha256": "8d3e5015ebd896c6d74532d109e6c17ae26b9cef93c13a60ea7b35c16a91d219",
+      "executableFiles": []
+    },
+    {
+      "path": "skills/resolving-merge-conflicts",
+      "installName": "resolving-merge-conflicts",
+      "sha256": "ae2a66719d8df35bfa26c775aba9134d81e41a816bdeda841ba9071bfd12dd44",
+      "executableFiles": []
+    },
+    {
+      "path": "skills/running-gradle",
+      "installName": "running-gradle",
+      "sha256": "c1ee64d81310618ebc9c38bf44afa5cf96a104686e03ba97ee27496a21af1dd4",
+      "executableFiles": []
+    },
+    {
+      "path": "skills/working-across-m8test-repositories",
+      "installName": "working-across-m8test-repositories",
+      "sha256": "7693767e17bb5990e5b64af20db2b7cc5b9663629e3b8d17ff359b3548d4aef1",
+      "executableFiles": []
+    },
+    {
+      "path": "skills/developing-script-projects",
+      "installName": "developing-script-projects",
+      "sha256": "3ad9f82e8e9956ca9070269c91efd28b90de2e32e1f02003a46ed71d82cc593e",
+      "executableFiles": []
+    },
+    {
+      "path": "skills/using-script-global-variables",
+      "installName": "using-script-global-variables",
+      "sha256": "c0c7d6b1414d00e6468ccd9277d248be1cfd68ff6ebc67e457aecd8b3ebf8085",
+      "executableFiles": []
+    }
+  ]
+}
