@@ -2,6 +2,7 @@
   "formatVersion": 1,
   "source": "https://github.com/m8test-core/skills.git",
   "profiles": [
+    "common",
     "script-project"
   ],
   "include": [],
