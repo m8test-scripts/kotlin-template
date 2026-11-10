@@ -1,0 +1,7 @@
+{
+  "m8test.project.name": "Kotlin 脚本示例",
+  "m8test.project.description": "展示如何创建支持多语言的 Kotlin 脚本项目。",
+  "demo.button.label": "你好",
+  "demo.button.clicked.prefix": "你好",
+  "demo.language": "脚本语言：Kotlin"
+}

@@ -4,6 +4,8 @@ import android.view.Gravity
 import android.view.View
 import android.widget.Button
 import android.widget.FrameLayout
+import android.widget.LinearLayout
+import android.widget.TextView
 import com.example.tool.ToolB
 import com.m8test.script.GlobalVariables.*
 
@@ -12,21 +14,38 @@ fun primaryRun() {
     val tool = ToolB()
     tool.methodB(_console)
     _androidView.create(true) {
+        val content = LinearLayout(context)
+        content.orientation = LinearLayout.VERTICAL
+        content.gravity = Gravity.CENTER
+
         val button = Button(context)
-        button.text = "Hello"
+        button.text = _stringResources.getString("demo.button.label")
         var num = 0
-        val lp = FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT)
-        // 居中显示按钮
-        lp.gravity = Gravity.CENTER
         // 这里不能使用 lambda, 否则会崩溃
         button.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View) {
                 v as Button
-                v.text = "Hello${num++}"
+                v.text = "${_stringResources.getString("demo.button.clicked.prefix")}${num++}"
             }
         })
-        // 添加按钮到界面
-        addView(button, lp)
+        content.addView(
+            button,
+            LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT),
+        )
+
+        val languageLabel = TextView(context)
+        languageLabel.text = _stringResources.getString("demo.language")
+        val languageLabelParams = LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.WRAP_CONTENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT,
+        )
+        languageLabelParams.topMargin = (8 * context.resources.displayMetrics.density).toInt()
+        content.addView(languageLabel, languageLabelParams)
+
+        val lp = FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT)
+        // 居中显示按钮和语言标识
+        lp.gravity = Gravity.CENTER
+        addView(content, lp)
     }
     // 显示界面
     _activity.start()

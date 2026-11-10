@@ -68,6 +68,23 @@
 
 ---
 
+## 🌐 脚本项目 i18n
+
+模板在 `kotlin/src/main/resources/strings/` 提供 `en.json` 和 `zh.json`。目录中的 JSON 文件使用 BCP 47 语言标签命名；脚本跟随 Development Kit 当前语言，不需要单独设置 locale。
+
+Kotlin 的脚本全局变量带有 `_` 前缀，因此通过 `_stringResources` 读取本地化文案：
+
+```kotlin
+button.text = _stringResources.getString("demo.button.label")
+languageLabel.text = _stringResources.getString("demo.language")
+```
+
+示例将按钮、点击后的文本和按钮下方的语言标识都放在 catalog 中。`demo.language` 是完整文案，例如 `Script language: Kotlin` 和 `脚本语言：Kotlin`；`Kotlin` 作为语言名称保持不变。
+
+`m8test.project.description` 可分别翻译项目描述。中文 catalog 使用 `m8test.project.name` 提供中文项目名称；英文 catalog 留空该键，以保留宿主配置提供的名称回退值。
+
+---
+
 ## 🛠️ 项目开发流程
 
 1. **生成全局变量**  

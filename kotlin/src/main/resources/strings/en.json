@@ -1,0 +1,6 @@
+{
+  "m8test.project.description": "A localized Kotlin starter project.",
+  "demo.button.label": "Hello",
+  "demo.button.clicked.prefix": "Hello",
+  "demo.language": "Script language: Kotlin"
+}
